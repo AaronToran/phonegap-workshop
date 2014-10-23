@@ -1,10 +1,9 @@
 var app = {
-    renderHomeView: function() {
         renderHomeView: function() {
             $('body').html(this.homeTpl());
             $('.search-key').on('keyup', $.proxy(this.findByName, this));
         },
-    },
+
     findByName: function() {
         var self = this;
         this.store.findByName($('.search-key').val(), function(employees) {
